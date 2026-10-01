@@ -1,7 +1,3 @@
-/* ---------- Colour variables ---------- */
-
-/* CSS variables: define a colour once, reuse it everywhere with var(--name).
-   ":root" means the whole page. These are the LIGHT mode colours. */
 :root {
   --bg: #faf7f2;
   --text: #333333;
@@ -12,13 +8,11 @@
   --line: #e0d6cc;
 }
 
-/* DARK mode: when <html> has data-theme="dark", these values replace
-   the ones above. Every rule using var(...) updates automatically. */
 [data-theme="dark"] {
   --bg: #1a1a1f;
   --text: #e6e6e6;
   --card: #26262d;
-  --accent: #f06292;      /* lighter pink, the dark pink is hard to read on dark */
+  --accent: #f06292;
   --border: #44444d;
   --table-head: #3a2530;
   --line: #44444d;
@@ -29,9 +23,9 @@ body {
   color: var(--text);
   background-color: var(--bg);
   line-height: 1.6;
-  max-width: 800px;   /* stops lines getting too long on wide screens */
-  margin: 0 auto;     /* 0 top/bottom, auto left/right = centred */
-  padding: 0 20px;    /* breathing room on small screens */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* header and navigation  */
@@ -46,36 +40,36 @@ h1 {
   margin-bottom: 0;
 }
 
-/* The menu list: remove bullets and lay the items out in a row */
+/* menu list */
 nav ul {
   list-style: none;
   padding: 0;
 }
 
 nav li {
-  display: inline-block;   /* side by side, but still able to have padding */
+  display: inline-block;
   margin: 0 10px;
 }
 
 nav a {
   color: var(--accent);
-  text-decoration: none;   /* removes the default underline */
+  text-decoration: none;
   font-weight: bold;
 }
 
-/* :hover applies only while the mouse is over the link */
+
 nav a:hover {
   text-decoration: underline;
 }
 
-/* The light/dark switch button */
+
 #theme-toggle {
   background-color: var(--card);
   color: var(--text);
   border: 1px solid var(--accent);
-  border-radius: 20px;      /* big radius = pill shape */
+  border-radius: 20px;
   padding: 6px 14px;
-  cursor: pointer;          /* hand cursor so it feels clickable */
+  cursor: pointer;
   font-size: 0.9em;
 }
 
@@ -84,13 +78,12 @@ nav a:hover {
   color: var(--card);
 }
 
-/* ---------- Content ---------- */
+/* Content */
 
 h2, h3 {
   color: var(--accent);
 }
 
-/* Each <section> becomes a "card" */
 section {
   background-color: var(--card);
   padding: 15px 20px;
@@ -98,8 +91,7 @@ section {
   border-radius: 8px;
 }
 
-/* max-width: 100% lets images shrink on narrow screens
-   (the width="400" in the HTML still sets the normal size) */
+
 img {
   max-width: 100%;
   height: auto;
@@ -113,10 +105,10 @@ blockquote {
   font-style: italic;
 }
 
-/* ---------- Table (About page) ---------- */
+/* about */
 
 table {
-  border-collapse: collapse;   /* merges double borders into one line */
+  border-collapse: collapse;
 }
 
 th, td {
@@ -129,15 +121,14 @@ th {
   background-color: var(--table-head);
 }
 
-/* ---------- Footer ---------- */
+/* footer */
 
 footer {
   text-align: center;
-  font-size: 0.9em;   /* 90% of the normal text size */
+  font-size: 0.9em;
   padding: 10px 0 20px;
 }
 
-/* The <hr> lines are now redundant, so style them softly */
 hr {
   border: none;
   border-top: 1px solid var(--line);
